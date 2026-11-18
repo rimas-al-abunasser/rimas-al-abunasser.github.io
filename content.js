@@ -3,12 +3,10 @@ window.CONTENT = {
   en: {
     docTitle: "Rimas Al AbuNasser · Product Manager",
     name: "Rimas Al AbuNasser",
-    quickBtn: "Quick view",
     introEyebrow: "Product · AI · Data · IoT",
     introTitle: "Every place I go,<br>I leave a <em>trace</em>.",
     introSub: "Six stops. Five keys. One name.",
     introHint: "Scroll, or press Enter ↵",
-    introRecruiter: "In a hurry? Press Ctrl for the quick view.",
     more: "More",
     todo: "To do", doing: "Doing", done: "Done",
 
@@ -60,7 +58,6 @@ window.CONTENT = {
     finWhere: "Abha, Saudi Arabia · open to relocation within KSA",
     finEmail: "Email me",
     finLinkedin: "LinkedIn",
-    finQuick: "Quick view",
     finReplay: "Replay",
 
     details: {
@@ -98,52 +95,16 @@ window.CONTENT = {
         "My part: trained and compared YOLO runs, chose the model and weights, and tuned the confidence threshold.",
         "Teammates built duplicate detection, prioritization and the Streamlit interface."
       ], tags: ["YOLO", "Computer vision", "RDD2022", "Experimentation"] }
-    },
-
-    quick: {
-      title: "Quick view",
-      back: "Back to the journey",
-      summary: "Information Systems graduate (Data Science track) moving into product management. Product Owner experience, a startup I founded, and hands-on builds in AI, data and IoT.",
-      expTitle: "Experience",
-      exp: [
-        ["Data Analytics Trainer", "Mishkat", "Aug–Oct 2026", "Designed the curriculum from scratch. 2 cohorts, 40 sessions, 80 hours."],
-        ["Data Analyst", "Milhaa", "Jul–Nov 2025", "Built Power BI and Tableau dashboards from scratch, Python analysis and Notion workflows. Lead Trainer for BotBox STEM programs."],
-        ["Digital Manufacturing Trainer · Seasonal", "Tuwaiq Academy", "Jul 2025", "3D design and printing for 71 trainees."],
-        ["Product Owner", "Innovation Front IT", "Feb–Jul 2024", "User stories, acceptance criteria, backlog and sprint planning in Jira. Market research."]
-      ],
-      prjTitle: "Selected projects",
-      prj: [
-        ["Rewaa", "Project Manager & hardware · smart irrigation · 3rd place, Tech Connect 2025"],
-        ["Burhan", "Technical Domain Lead · AI regulatory compliance · Amad Hackathon"],
-        ["3-Eye RoadScan", "YOLO detector · AI road damage detection · 2026"],
-        ["Kameel", "Founder & Team Lead · AI project management · CODE LAB"],
-        ["Sunflower Solar Tracker", "IoT · 1st place, Node-RED Bootcamp 2023"]
-      ],
-      awardsTitle: "Awards",
-      awards: ["1st · Node-RED Bootcamp · 2023", "2nd · TinyML Bootcamp · 2024", "3rd · Tech Connect · 2025"],
-      skillsTitle: "Skills",
-      skills: [
-        ["Product", "Backlog · User stories · Acceptance criteria · Sprint planning · Jira · Notion · Market research"],
-        ["Data", "Python · SQL · Power BI · Tableau · Excel"],
-        ["AI & IoT", "YOLO · RAG · TinyML · ESP32 · Arduino · Node-RED"]
-      ],
-      eduTitle: "Education",
-      edu: "B.Sc. Information Systems, Data Science track · King Khalid University · 2021–2025",
-      langTitle: "Languages",
-      langs: "Arabic (native) · English (good)",
-      contactTitle: "Contact"
     }
   },
 
   ar: {
     docTitle: "ريماس آل أبوناصر · مديرة منتج",
     name: "ريماس آل أبوناصر",
-    quickBtn: "النسخة السريعة",
     introEyebrow: "المنتجات · الذكاء الاصطناعي · البيانات · إنترنت الأشياء",
     introTitle: "في كل مكان أكون فيه،<br>أترك <em>أثر</em>.",
     introSub: "ست محطات. خمسة أزرار. اسم واحد.",
     introHint: "مرّر للأسفل، أو اضغط Enter ↵",
-    introRecruiter: "مستعجل؟ اضغط Ctrl للنسخة السريعة.",
     more: "التفاصيل",
     todo: "للتنفيذ", doing: "قيد العمل", done: "تم",
 
@@ -195,7 +156,6 @@ window.CONTENT = {
     finWhere: "أبها، السعودية · مستعدة للانتقال داخل المملكة",
     finEmail: "راسليني",
     finLinkedin: "لينكدإن",
-    finQuick: "النسخة السريعة",
     finReplay: "من البداية",
 
     details: {
@@ -233,40 +193,6 @@ window.CONTENT = {
         "دوري: دربت وقارنت تجارب YOLO، واخترت النموذج والأوزان، وضبطت عتبة الثقة.",
         "زميلاتي بنوا كشف التكرار، وترتيب الأولويات، وواجهة Streamlit."
       ], tags: ["YOLO", "الرؤية الحاسوبية", "RDD2022", "التجريب"] }
-    },
-
-    quick: {
-      title: "النسخة السريعة",
-      back: "ارجع للرحلة",
-      summary: "خريجة نظم معلومات (مسار علم البيانات) متجهة لإدارة المنتجات. عندي خبرة Product Owner، ومشروع ريادي أسسته، ومشاريع عملية في الذكاء الاصطناعي والبيانات وإنترنت الأشياء.",
-      expTitle: "الخبرات",
-      exp: [
-        ["مدربة تحليل بيانات", "مشكاة", "أغسطس–أكتوبر 2026", "صممت المنهج من الصفر. دفعتين، 40 جلسة، 80 ساعة."],
-        ["محللة بيانات", "ملحة", "يوليو–نوفمبر 2025", "بنيت لوحات Power BI وTableau من الصفر، وتحليل بـPython، وأنظمة عمل في Notion. ومدربة رئيسية لبرامج BotBox."],
-        ["مدربة تصنيع رقمي · موسمي", "أكاديمية طويق", "يوليو 2025", "التصميم والطباعة ثلاثية الأبعاد لـ71 متدرب."],
-        ["Product Owner", "واجهة الابتكار لتقنية المعلومات", "فبراير–يوليو 2024", "قصص المستخدم، ومعايير القبول، وإدارة الـBacklog وتخطيط السبرنتات في Jira. ودراسات سوق."]
-      ],
-      prjTitle: "مشاريع مختارة",
-      prj: [
-        ["رِواء", "مديرة المشروع والهاردوير · ري ذكي · المركز الثالث في Tech Connect 2025"],
-        ["برهان", "قائدة الجانب التقني · امتثال تنظيمي بالذكاء الاصطناعي · هاكاثون أمد"],
-        ["⁦3-Eye RoadScan⁩", "كاشف YOLO · اكتشاف عيوب الطرق بالذكاء الاصطناعي · 2026"],
-        ["كميل", "مؤسِّسة وقائدة فريق · إدارة مشاريع بالذكاء الاصطناعي · CODE LAB"],
-        ["Sunflower Solar Tracker", "إنترنت الأشياء · المركز الأول في معسكر Node-RED 2023"]
-      ],
-      awardsTitle: "الجوائز",
-      awards: ["الأول · معسكر Node-RED · 2023", "الثاني · معسكر TinyML · 2024", "الثالث · Tech Connect · 2025"],
-      skillsTitle: "المهارات",
-      skills: [
-        ["المنتج", "Backlog · قصص المستخدم · معايير القبول · تخطيط السبرنت · Jira · Notion · دراسة السوق"],
-        ["البيانات", "Python · SQL · Power BI · Tableau · Excel"],
-        ["الذكاء الاصطناعي وإنترنت الأشياء", "YOLO · RAG · TinyML · ESP32 · Arduino · Node-RED"]
-      ],
-      eduTitle: "التعليم",
-      edu: "بكالوريوس نظم المعلومات، مسار علم البيانات · جامعة الملك خالد · 2021–2025",
-      langTitle: "اللغات",
-      langs: "العربية (اللغة الأم) · الإنجليزية (جيد)",
-      contactTitle: "التواصل"
     }
   },
 

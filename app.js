@@ -36,7 +36,6 @@
     var lb = document.querySelector(".lang");
     lb.textContent = l === "ar" ? "EN" : "ع";
     lb.setAttribute("aria-label", l === "ar" ? "Switch to English" : "التبديل إلى العربية");
-    renderQuick();
     try { localStorage.setItem("rimas-lang", l); } catch (e) {}
     if (window.ScrollTrigger && !document.body.classList.contains("static")) ScrollTrigger.refresh();
   }
@@ -221,31 +220,7 @@
     SCENES[name](panel, p);
   }
 
-  /* ---------- Quick view ---------- */
-  var quick = document.getElementById("quick");
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
-  function renderQuick() {
-    var T = C[lang], Q = T.quick;
-    var h = '<div class="q-head"><div class="q-id"><span class="av"><img src="assets/logo.webp" alt=""></span><div><h1 id="q-title">' + esc(T.name) + '</h1><p>' + esc(T.finRole) + '</p></div></div>' +
-      '<button class="key" type="button" data-act="quick"><span class="k-hint">Esc</span>' + esc(Q.back) + '</button></div>' +
-      '<p class="q-look">' + esc(T.finLooking) + '</p><p class="q-sum">' + esc(Q.summary) + '</p>' +
-      '<section class="q-sec"><h2>' + esc(Q.expTitle) + '</h2><div class="q-exp">' +
-      Q.exp.map(function (x) { return '<article><h3>' + esc(x[0]) + ' · <span class="org">' + esc(x[1]) + '</span></h3><time>' + esc(x[2]) + '</time><p>' + esc(x[3]) + '</p></article>'; }).join("") + '</div></section>' +
-      '<section class="q-sec"><h2>' + esc(Q.prjTitle) + '</h2><div class="q-prj">' +
-      Q.prj.map(function (x) { return '<div><b>' + esc(x[0]) + '</b><span>' + esc(x[1]) + '</span></div>'; }).join("") + '</div></section>' +
-      '<section class="q-sec"><h2>' + esc(Q.awardsTitle) + '</h2><div class="q-list">' + Q.awards.map(function (a) { return '<span>' + esc(a) + '</span>'; }).join("") + '</div></section>' +
-      '<section class="q-sec"><h2>' + esc(Q.skillsTitle) + '</h2><div class="q-skills">' + Q.skills.map(function (s) { return '<div><b>' + esc(s[0]) + '</b><span>' + esc(s[1]) + '</span></div>'; }).join("") + '</div></section>' +
-      '<section class="q-sec"><h2>' + esc(Q.eduTitle) + '</h2><p>' + esc(Q.edu) + '</p></section>' +
-      '<section class="q-sec"><h2>' + esc(Q.langTitle) + '</h2><p>' + esc(Q.langs) + '</p></section>' +
-      '<section class="q-sec"><h2>' + esc(Q.contactTitle) + '</h2><div class="q-contact"><a class="key go" href="mailto:' + esc(C.contact.email) + '">' + esc(T.finEmail) + ' ↵</a><a class="key" href="' + esc(C.contact.linkedin) + '" target="_blank" rel="noopener">' + esc(T.finLinkedin) + '</a><span class="mail">' + esc(C.contact.email) + '</span></div><p style="margin-top:10px;color:#6B675F;font-size:.9rem">' + esc(T.finWhere) + '</p></section>';
-    quick.querySelector(".q-inner").innerHTML = h;
-  }
-  var lastFocus = null;
-  function toggleQuick(force) {
-    var open = force !== undefined ? force : quick.hidden;
-    if (open) { lastFocus = document.activeElement; quick.hidden = false; document.body.style.overflow = "hidden"; var b = quick.querySelector("button"); if (b) b.focus(); }
-    else { quick.hidden = true; document.body.style.overflow = ""; if (lastFocus && lastFocus.focus) lastFocus.focus(); }
-  }
 
   /* ---------- Details dialog ---------- */
   var dlg = document.getElementById("more");
@@ -309,23 +284,16 @@
     var t = e.target.closest("[data-act],[data-more]"); if (!t) return;
     var act = t.getAttribute("data-act");
     if (t.hasAttribute("data-more")) { openMore(t.getAttribute("data-more")); return; }
-    if (act === "quick") { e.preventDefault(); toggleQuick(); }
-    else if (act === "lang") applyLang(lang === "ar" ? "en" : "ar");
-    else if (act === "home") { e.preventDefault(); toggleQuick(false); window.scrollTo({ top: 0, behavior: "smooth" }); }
+    if (act === "lang") applyLang(lang === "ar" ? "en" : "ar");
+    else if (act === "home") { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }
     else if (act === "close-more") dlg.close();
   });
-  var ctrlAlone = false;
   document.addEventListener("keydown", function (e) {
-    if (e.key === "Control") { ctrlAlone = !e.repeat; return; }
-    ctrlAlone = false;
-    if (e.key === "Escape" && !quick.hidden) { toggleQuick(false); return; }
-    if (!quick.hidden || dlg.open) return;
+    if (dlg.open) return;
     var a = document.activeElement, onCtl = a && a !== document.body && /^(BUTTON|A|INPUT)$/.test(a.tagName);
     if ((e.key === "Enter" && !onCtl) || e.key === "ArrowRight" || e.key === "PageDown") { e.preventDefault(); goTo(currentIndex() + 1); }
     else if (e.key === "ArrowLeft" || e.key === "PageUp") { e.preventDefault(); goTo(currentIndex() - 1); }
   });
-  document.addEventListener("keyup", function (e) { if (e.key === "Control" && ctrlAlone) { ctrlAlone = false; toggleQuick(); } });
-  document.addEventListener("mousedown", function () { ctrlAlone = false; });
 
   /* ---------- Boot ---------- */
   applyLang(lang);

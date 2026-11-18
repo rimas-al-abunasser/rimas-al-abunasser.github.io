@@ -30,7 +30,6 @@
     <li><i style="--c:#F4C430"></i></li><li><i style="--c:#0B3478"></i></li><li><i style="--c:#12963A"></i></li><li><i style="--c:#E3241B"></i></li><li><i style="--c:#0B3478"></i></li><li><i style="--c:#8C12AE"></i></li><li><i style="--c:#E0DDD5"></i></li>
   </ol>
   <div class="actions">
-    <button class="key" type="button" data-act="quick"><span class="k-hint">Ctrl</span><span data-t="quickBtn">Quick view</span></button>
     <button class="key lang" type="button" data-act="lang" aria-label="العربية">ع</button>
   </div>
 </header>
@@ -45,7 +44,6 @@
         <h1 class="big" data-h="introTitle"></h1>
         <p class="sub" data-t="introSub"></p>
         <p class="hint"><span data-t="introHint"></span></p>
-        <p class="recruiter"><span class="key sm">Ctrl</span> <span data-t="introRecruiter"></span></p>
       </div>
       <div class="chase" aria-hidden="true">
         <img class="c-ctrl" src="assets/ctrl.webp" alt="">
@@ -220,7 +218,6 @@
         <div class="cta">
           <a class="key go" data-mail href="#"><span data-t="finEmail"></span> ↵</a>
           <a class="key" data-linkedin href="#" target="_blank" rel="noopener"><span data-t="finLinkedin"></span></a>
-          <button class="key" type="button" data-act="quick"><span data-t="finQuick"></span></button>
           <button class="key" type="button" data-act="home"><span data-t="finReplay"></span></button>
         </div>
         <p class="mail-text" data-mailtext></p>
@@ -235,19 +232,12 @@
   </div>
 </main>
 
-<!-- Quick view (Ctrl) -->
-<section class="quick" id="quick" hidden aria-labelledby="q-title">
-  <div class="q-inner"></div>
-</section>
-
 <!-- Details -->
 <dialog class="more-dlg" id="more">
   <div class="m-head"><h3></h3><button class="key" type="button" data-act="close-more">Esc</button></div>
   <ul class="m-list"></ul>
   <div class="m-tags"></div>
 </dialog>
-
-<noscript><style>.journey{display:none}.quick{display:block!important;position:static}</style></noscript>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
